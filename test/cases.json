@@ -1,0 +1,128 @@
+[
+    {
+        "title": "The Impossible Target",
+        "description": "🚫 The magazine doesn't have the required letter at all.",
+        "input": {
+            "ransomNote": "a",
+            "magazine": "b"
+        },
+        "output": false
+    },
+    {
+        "title": "The Shortage",
+        "description": "📉 The magazine has the right letter, but not enough copies of it.",
+        "input": {
+            "ransomNote": "aa",
+            "magazine": "ab"
+        },
+        "output": false
+    },
+    {
+        "title": "The Abundant Supply",
+        "description": "📦 The magazine has more than enough letters to cover the required duplicates.",
+        "input": {
+            "ransomNote": "aa",
+            "magazine": "aab"
+        },
+        "output": true
+    },
+    {
+        "title": "The Exact Anagram",
+        "description": "🧩 The magazine is an exact scramble of the ransom note with no leftover letters.",
+        "input": {
+            "ransomNote": "danger",
+            "magazine": "garden"
+        },
+        "output": true
+    },
+    {
+        "title": "The Length Mismatch",
+        "description": "📏 The ransom note is longer than the magazine, making it instantly impossible.",
+        "input": {
+            "ransomNote": "givemeamillion",
+            "magazine": "no"
+        },
+        "output": false
+    },
+    {
+        "title": "The Substring Extraction",
+        "description": "✂️ The ransom note letters are scattered seamlessly throughout a larger word.",
+        "input": {
+            "ransomNote": "code",
+            "magazine": "leetcode"
+        },
+        "output": true
+    },
+    {
+        "title": "The Alphabet Soup",
+        "description": "🥣 The magazine contains the entire alphabet, easily fulfilling a small, unique note.",
+        "input": {
+            "ransomNote": "xyz",
+            "magazine": "abcdefghijklmnopqrstuvwxyz"
+        },
+        "output": true
+    },
+    {
+        "title": "The 'Off-By-One' Illusion",
+        "description": "👀 The magazine looks like it has everything, but it is sneakily missing exactly one duplicate character.",
+        "input": {
+            "ransomNote": "mississippi",
+            "magazine": "misissipi"
+        },
+        "output": false
+    },
+    {
+        "title": "The Needle in the Haystack",
+        "description": "🌾 The magazine is enormous, but it is missing the one extremely rare character needed for the note.",
+        "input": {
+            "ransomNote": "zebra",
+            "magazine": "abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy"
+        },
+        "output": false
+    },
+    {
+        "title": "The Decoy Overload",
+        "description": "🗑️ The magazine has thousands of useless decoy characters, forcing the algorithm to sift through massive noise to find the exact matches.",
+        "input": {
+            "ransomNote": "hello",
+            "magazine": "qwehertyuillopoasdfghjklzxcvbnmqwehertyuillopo"
+        },
+        "output": true
+    },
+    {
+        "title": "High Frequency Duplicates (Success)",
+        "description": "👯‍♂️ The note requires a massive cluster of just a few characters. The magazine has them perfectly scrambled.",
+        "input": {
+            "ransomNote": "aaaaabbbbbccccc",
+            "magazine": "abcabcabcabcabc"
+        },
+        "output": true
+    },
+    {
+        "title": "High Frequency Duplicates (Failure)",
+        "description": "📉 The magazine is packed with characters, but is short by exactly one 'a' in a massive cluster.",
+        "input": {
+            "ransomNote": "aaaaabbbbbccccc",
+            "magazine": "abcabcabcabcbc"
+        },
+        "output": false
+    },
+    {
+        "title": "The Disjoint Sets",
+        "description": "🧱 The strings are exactly the same length, but share absolutely zero characters. (Tests if the algorithm fails fast).",
+        "input": {
+            "ransomNote": "zzzzzzzzzz",
+            "magazine": "aaaaaaaaaa"
+        },
+        "output": false
+    },
+    {
+        "title": "The Reverse Alphabetical Trap",
+        "description": "🔤 The magazine is sorted backwards, while the note is sorted forwards, ensuring any early-exit or sorting assumptions are thoroughly tested.",
+        "input": {
+            "ransomNote": "abcde",
+            "magazine": "zyxwvutsrqponmlkjihgfedcba"
+        },
+        "output": true
+    }
+]
